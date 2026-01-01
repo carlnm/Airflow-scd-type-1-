@@ -1,0 +1,11 @@
+{"timestamp":"2025-12-31T12:02:08.832067Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-12-31T12:02:08.834399Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/our_first_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-31T12:02:08.872010Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/our_first_dag.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-12-31T12:02:09.165300Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-12-31T12:02:09.166221Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-12-31T12:02:09.167386Z","level":"info","event":"Current task name:load_dim_customer","logger":"task.stdout"}
+{"timestamp":"2025-12-31T12:02:09.168152Z","level":"info","event":"Dag name:adventureworks_full_etl_v1","logger":"task.stdout"}
+{"timestamp":"2025-12-31T12:02:10.023691Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":217}
+{"timestamp":"2025-12-31T12:02:10.042990Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-12-31T12:02:10.043502Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-12-31T12:02:10.044080Z","level":"info","event":"Task operator:<Task(PythonOperator): load_dim_customer>","logger":"task.stdout"}

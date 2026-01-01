@@ -1,0 +1,12 @@
+{"timestamp":"2025-12-30T14:49:30.688285Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-12-30T14:49:30.689811Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/our_first_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-30T14:49:30.705796Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/our_first_dag.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2025-12-30T14:49:30.741942Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-12-30T14:49:30.742619Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-12-30T14:49:30.743204Z","level":"info","event":"Current task name:greet","logger":"task.stdout"}
+{"timestamp":"2025-12-30T14:49:30.743815Z","level":"info","event":"Dag name:our_first_dag_v2","logger":"task.stdout"}
+{"timestamp":"2025-12-30T14:49:30.744345Z","level":"info","event":"Hello World","logger":"task.stdout"}
+{"timestamp":"2025-12-30T14:49:30.744677Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":217}
+{"timestamp":"2025-12-30T14:49:30.764430Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-12-30T14:49:30.765261Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-12-30T14:49:30.765781Z","level":"info","event":"Task operator:<Task(PythonOperator): greet>","logger":"task.stdout"}
