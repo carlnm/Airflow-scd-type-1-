@@ -1,0 +1,12 @@
+{"timestamp":"2026-01-02T13:22:22.169923Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-01-02T13:22:22.173519Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/our_first_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-01-02T13:22:22.237306Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/our_first_dag.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2026-01-02T13:22:22.490064Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-01-02T13:22:22.491673Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-01-02T13:22:22.493206Z","level":"info","event":"Current task name:extract_product","logger":"task.stdout"}
+{"timestamp":"2026-01-02T13:22:22.494731Z","level":"info","event":"Dag name:adventureworks_full_etl","logger":"task.stdout"}
+{"timestamp":"2026-01-02T13:22:23.961231Z","level":"warning","event":"pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.","category":"UserWarning","filename":"/opt/airflow/dags/our_first_dag.py","lineno":61,"logger":"py.warnings"}
+{"timestamp":"2026-01-02T13:22:24.147381Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":217}
+{"timestamp":"2026-01-02T13:22:24.200763Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-01-02T13:22:24.202056Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-01-02T13:22:24.203287Z","level":"info","event":"Task operator:<Task(PythonOperator): extract_product>","logger":"task.stdout"}

@@ -11,7 +11,7 @@ from psycopg2.extras import execute_values
 
 MSSQL_CONFIG = {
     "driver": "ODBC Driver 17 for SQL Server",
-    "server": "host.docker.internal\\SQLEXPRESS",  # remove SQLEXPRESS for TCP connection
+    "server": "host.docker.internal\\SQLEXPRESS",
     "database": "CARL",
     "username": "sa",
     "password": "123",
@@ -34,7 +34,7 @@ def get_mssql_conn():
         f"UID={MSSQL_CONFIG['username']};"
         f"PWD={MSSQL_CONFIG['password']}"
     )
-    return pyodbc.connect(conn_str, timeout=30)  # optional timeout
+    return pyodbc.connect(conn_str, timeout=30)
 
 
 def get_pg_conn():
@@ -59,6 +59,7 @@ def extract_product():
             LEFT JOIN Production.ProductCategory as pc ON ps.ProductCategoryID = pc.ProductCategoryID
         """
         df = pd.read_sql(sql, mssql)
+
         cur = pg.cursor()
         cur.execute("TRUNCATE TABLE stg.product_raw")
         execute_values(
@@ -323,6 +324,8 @@ def load_fact_sales():
                     productkey,
                     customerkey,
                     territorykey,
+                    salesorderid,      
+                    salesorderdetailid,
                     orderqty,
                     unitprice,
                     linetotal
@@ -332,6 +335,8 @@ def load_fact_sales():
                     dp.productkey,
                     dc.customerkey,
                     dt.territorykey,
+                    s.salesorderid,       
+                    s.salesorderdetailid,
                     s.orderqty,
                     s.unitprice::numeric,
                     s.linetotal::numeric
